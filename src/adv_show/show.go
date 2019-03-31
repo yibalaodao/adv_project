@@ -2,9 +2,9 @@ package adv_show
 
 import (
 	"database/sql"
-	_ "database/sql"
+	//_ "database/sql"
 	"fmt"
-	_ "github/lib/pg"
+	_ "github.com/lib/pq"
 )
 
 type AdvInfo struct {
@@ -17,7 +17,7 @@ type AdvInfo struct {
 
 func sqlOpen() {
 	var err error
-	db, err = sql.Open("postgres", "port=5432 user=postgres password=laodaodao dbname=ficow sslmode=disable")
+	db, err = sql.Open("postgres", "port=5432 user=postgres password=laodaodao dbname=adv sslmode=disable")
 	if err ==nil {
 		fmt.Println("连接pgsql成功")
 	}
