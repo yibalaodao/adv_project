@@ -17,7 +17,7 @@ type AdvInfo struct {
 
 func sqlOpen() {
 	var err error
-	db, err = sql.Open("postgres", "port=5432 user=postgres password=laodaodao dbname=adv sslmode=disable")
+	db, err = sql.Open("postgres", "port=5432 user=adv_user password=laodaodao dbname=adv sslmode=disable")
 	if err ==nil {
 		fmt.Println("连接pgsql成功")
 	}
