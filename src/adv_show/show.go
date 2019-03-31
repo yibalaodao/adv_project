@@ -1,4 +1,4 @@
-package adv_show
+package main
 
 import (
 	"database/sql"
