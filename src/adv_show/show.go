@@ -1,10 +1,11 @@
-package main
+package adv_show
 
 import (
 	"database/sql"
 	//_ "database/sql"
 	"fmt"
 	_ "github.com/lib/pq"
+	"github.com/devfeel/dotweb"
 )
 
 type AdvInfo struct {
@@ -32,6 +33,8 @@ func sqlOpen() {
 	//还可以是这种方式打开
 	//db, err := sql.Open("postgres", "postgres://pqgotest:password@localhost/pqgotest?sslmode=verify-full")
 }
-func main()  {
-	sqlOpen()
+func ShowAdv(ctx dotweb.Context) error {
+	ctx.WriteString("welcome to my first show_adv!")
+return nil
 }
+
